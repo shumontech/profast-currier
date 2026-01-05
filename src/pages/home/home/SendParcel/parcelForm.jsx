@@ -1,5 +1,7 @@
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import UseAxiosSecure from "../../../../hooks/UseAxiosSecure";
+
 
 const regions = ["Dhaka", "Chattogram", "Khulna", "Rajshahi", "Sylhet"];
 
@@ -13,6 +15,8 @@ const serviceCenters = {
 
 const ParcelForm = () => {
   const { register, handleSubmit, watch } = useForm();
+
+  const axiosSecure = UseAxiosSecure();
 
   const parcelType = watch("parcelType");
   const weight = watch("weight");
@@ -38,8 +42,13 @@ const ParcelForm = () => {
       cancelButtonText: "Cancel",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire("Success!", "Parcel submitted successfully", "success");
-        console.log("Submitted Data:", data);
+        axiosSecure.post('/parcels', data)
+          .then(res => {
+            console.log(res.data);
+            Swal.fire("Success!", "Parcel submitted successfully", "success");
+            console.log("Submitted Data:", data);
+          })
+
       }
     });
   };
