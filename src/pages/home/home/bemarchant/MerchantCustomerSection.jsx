@@ -3,21 +3,20 @@ import illustration from "../../../../assets/Image/tracking/location-merchant.pn
 
 const MerchantCustomerSection = () => {
   return (
-    <section className="py-20 bg-base-100 m-0">
-      <div className="container mx-auto px-4">
+    <section className="py-20  bg-base-100 m-0">
+      <div className="container  mx-auto px-4">
         {/* Main Card */}
         <div
           className="
-            relative overflow-hidden
-            bg-[#09383b]
-            rounded-3xl
-            p-10 md:p-14
-            grid grid-cols-1 md:grid-cols-2
-            items-center
-            gap-10  
-          "
+            relative overflow-hidden  bg-[#09383b] bg-[url('assets/be-a-merchant-bg.png')] rounded-3xl p-10 md:p-14  grid grid-cols-1 md:grid-cols-2 items-center gap-8 "
+            
+            
+           
+            
+              
+       
         >
-          {/* TOP GLOW / WAVE GRADIENT */}
+{/* TOP GLOW / WAVE GRADIENT */}
           <div
             className="
               absolute -top-20 -right-20

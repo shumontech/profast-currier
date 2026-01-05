@@ -4,6 +4,8 @@ import OurServices from './card/Card';
 import CompanyLogoSlider from './companylogoslider/CompanyLogoSlider';
 import ThreeColumnFeatures from './ThreeColumnFeatures/ThreeColumnFeatures';
 import MerchantCustomerSection from './bemarchant/MerchantCustomerSection';
+import TestimonialCarousel from './Testimonial/Testimonial';
+import Accordion from './accordion/Accordion';
 
 
 const Home = () => {
@@ -14,6 +16,8 @@ const Home = () => {
             <CompanyLogoSlider></CompanyLogoSlider>
             <ThreeColumnFeatures></ThreeColumnFeatures>
             <MerchantCustomerSection></MerchantCustomerSection>
+            <TestimonialCarousel></TestimonialCarousel>
+            <Accordion></Accordion>
                      
 
             

@@ -8,11 +8,15 @@ import {
 } from "react-router-dom";
 
 import { router } from './router/Router';
+import AuthProvider from './context/authcontext/AuthProvider';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className='font-urbanist max-w-6xl mx-auto'>
+      <AuthProvider>
         <RouterProvider router={router} />,
+      </AuthProvider>
+        
     </div>
     
   </StrictMode>,
